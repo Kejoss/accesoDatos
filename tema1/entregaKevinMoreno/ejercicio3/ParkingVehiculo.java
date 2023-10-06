@@ -1,6 +1,7 @@
 package tema1.entregaKevinMoreno.ejercicio3;
 
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,7 +13,8 @@ public class ParkingVehiculo implements Parking{
     private ArrayList<Vehiculo> listaVehiculos;
     private int plazasActuales;
 
-    private int tiempoEstacionado;
+    private LocalDateTime tiempoEstacionadoInicio;
+    private LocalDateTime tiempoEstacionadoFin;
     private static final double PRECIOMINUTO = 0.0425;
     private static final int MAXPLAZAS = 100; 
 
@@ -34,7 +36,7 @@ public class ParkingVehiculo implements Parking{
     public void aparcaCoche(Vehiculo vehiculo) {
         listaVehiculos.add(vehiculo);
         plazasActuales++;
-        tiempoEstacionado = LocalDateTime.now().getMinute();
+        tiempoEstacionadoInicio = LocalDateTime.now();
     }
 
     @Override
@@ -43,6 +45,7 @@ public class ParkingVehiculo implements Parking{
        while (it.hasNext()) {
             if (it.next().equals(vehiculo)) {
                 it.remove();
+                tiempoEstacionadoFin  = LocalDateTime.now();
             }
        }
     }
@@ -51,7 +54,7 @@ public class ParkingVehiculo implements Parking{
     public double getFactura(Vehiculo vehiculo) {
        for (Vehiculo vehiculo2 : listaVehiculos) {
             if (vehiculo.equals(vehiculo2)) {
-                
+                int timepoEstacionado =tiempoEstacionadoFin.getMinute()-tiempoEstacionadoInicio.getMinute();
             }
        }
         return 0;
