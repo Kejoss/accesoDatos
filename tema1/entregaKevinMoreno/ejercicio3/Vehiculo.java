@@ -1,12 +1,12 @@
 package tema1.entregaKevinMoreno.ejercicio3;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Vehiculo {
     
     private String matricula;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private LocalDateTime fechaInicio;
+    private LocalDateTime fechaFin;
 
     public Vehiculo(String matricula) {
         this.matricula = matricula;
@@ -20,19 +20,19 @@ public class Vehiculo {
         this.matricula = matricula;
     }
 
-    public Date getFechaInicio() {
+    public LocalDateTime getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(LocalDateTime fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public LocalDateTime getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(LocalDateTime fechaFin) {
         this.fechaFin = fechaFin;
     }
 
