@@ -47,7 +47,8 @@ public class Ejercicio1 {
     }
 
     private String[] listarContenido(File file){
-        String[] contenido = new  
+        String[] contenido = new String[2]; 
+        return null;
     }
 
 }   
