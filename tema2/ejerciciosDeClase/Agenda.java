@@ -48,10 +48,11 @@ public class Agenda {
                     String telefono = sc.next();
 
                     if (listaContactos.size()<20) {
-                        if (!existeContatco(nombre+" "+telefono, listaContactos)) {
-                            anniadirContacto(nombre+" "+telefono);
-                        }else{
+                        if (existeContacto(nombre+" "+telefono, listaContactos)) {
                             System.out.println("El nombre del contacto ya existe");
+                        }else{
+                            anniadirContacto(nombre+" "+telefono);
+                            listaContactos.add(nombre+" "+telefono);
                         }
                     }else{
                         System.out.println("No hay espacio para agregar otro contacto");
@@ -59,8 +60,13 @@ public class Agenda {
 
                     break;
                 case 2:
-                    
-                    
+                    System.out.println("Ingresa lo que quieres buscar");
+                    String prefijo = sc.next();
+                    for (String string : listaContactos) {
+                        if (string.startsWith(prefijo)) {
+                            System.out.println(string);
+                        }
+                    }
 
                     break;
                 case 3:
@@ -71,15 +77,19 @@ public class Agenda {
                     break;
                     
                 default:
-
+                    System.out.println("numero invalido");
                     break;
             }
 
-        }
+        System.out.println("\n"+"Que operacion quieres realizar");
+        System.out.println("1- Nuevo Contacto, 2-Buscar por nombe, 3-Mostar todos, 4-salir");
 
+        }
+        sc.close();
+        System.out.println("Fin del programa");
     }
 
-    private static boolean existeContatco(String contacto, ArrayList<String> listaContactos){
+    private static boolean existeContacto(String contacto, ArrayList<String> listaContactos){
         
         for (String string : listaContactos) {
             
@@ -92,16 +102,16 @@ public class Agenda {
         return false;
     }
 
-    private static void anniadirContacto(String conctacto){
+    private static void anniadirContacto(String contacto){
         File file = new File("tema2/ejerciciosDeClase/agenda.txt");
-
+        BufferedWriter bw;
         try {
            
             if (file.exists()) {
                 
-                BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-                bw.newLine();
-                bw.write(conctacto);
+                bw = new BufferedWriter(new FileWriter(file));
+                bw.write(contacto);
+                bw.close();
 
             }
 
