@@ -1,0 +1,5 @@
+Ciudad Fecha Temperatura maxima Temperatura minima
+Madrid 2022-10-01 25 15
+Tomelloso 2022-10-01 27 12
+Guadalajara 2022-10-01 23 16
+Madrid 2022-10-02 23 11
