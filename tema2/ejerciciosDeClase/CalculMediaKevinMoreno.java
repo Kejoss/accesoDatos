@@ -8,7 +8,7 @@ public class CalculMediaKevinMoreno {
     
     public static void main(String[] args) {
         
-        File file = new File("tema2/ejerciciosDeClase/jugadores.txt");
+        File file = new File("tema2/archivos/jugadores.txt");
         
         try {
             

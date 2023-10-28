@@ -13,15 +13,16 @@ public class Actividad3 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        File file = new File("tema2/ejerciciosDeClase/agenda.txt");
+        File file = new File("tema2/archivos/meteo.txt");
         ArrayList<String> listameteorologica = new ArrayList<String>();
         try {
             if (file.exists()) {
             int vuelta = 0;
             BufferedReader bf = new BufferedReader(new FileReader(file));
-            while (bf.readLine()!=null) {
+            String linea;
+            while ((linea=bf.readLine())!=null) {
                 if (vuelta!=0) {
-                  listameteorologica.add(bf.readLine());  
+                  listameteorologica.add(linea);  
                 }
                 vuelta++;
             }
@@ -29,7 +30,7 @@ public class Actividad3 {
             }
 
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
 
         System.out.println("¿Que operacion quieres hacer?");
@@ -49,36 +50,59 @@ public class Actividad3 {
                     String temMin = sc.next();
 
                     listameteorologica.add(ciudad+" "+fecha+" "+temMax+" "+temMin);
-                    registrarTemperatura(listameteorologica);
+                    registrarTemperatura(ciudad+" "+fecha+" "+temMax+" "+temMin);
 
                     break;
                 case 2:
-                    
 
+                    System.out.println("Ingresa el nombre de la ciudad");
+                    String ciudadBus = sc.next();
+
+                    for (String string : listameteorologica) {
+                        if (string.split(" ")[0].equalsIgnoreCase(ciudadBus)) {
+                            System.out.println(string);
+                        }
+                    }
 
                     break;
                 case 3:
                     
-                    break;
+                    System.out.println("Ingresa la ciudad ");
+                    String ciudadMedia= sc.next();
+                    int mediaMin=0, mediaMax = 0, vuelta=0;
+                    for (String string : listameteorologica) {
+                        
+                        if (string.split(" ")[0].equalsIgnoreCase(ciudadMedia)) {
+                            mediaMax+=Integer.parseInt(string.split(" ")[2]);
+                            mediaMin+=Integer.parseInt(string.split(" ")[3]);
+                            vuelta++;
+                        }
+                    }
+
+                    System.out.println("Media de temperatura minima: "+(mediaMin/vuelta));
+                    System.out.println("Media de temperatura maxima: "+(mediaMax/vuelta));
+                    System.out.println("Media de temperatura general: "+(((mediaMin/vuelta)+(mediaMax/vuelta))/2));
+
+                  break;
             
                 default:
                     break;
             }
+            System.out.println("\n 1- Registrar nueva temperatura, 2-Mostar historial de registros, 3-Mostar media de temperatura, 4-salir");
 
         }
 
-
+        sc.close();
     } 
     
-    private static void registrarTemperatura(ArrayList<String>listameteorologica){
+    private static void registrarTemperatura(String linea){
 
-        File file = new File("tema2/ejerciciosDeClase/agenda.txt");
+        File file = new File("tema2/archivos/meteo.txt");
         try {
             
-            BufferedWriter br = new BufferedWriter(new FileWriter(file));
-            for (String string : listameteorologica) {
-                br.write(string);
-            }
+            BufferedWriter br = new BufferedWriter(new FileWriter(file,true));
+            br.newLine();
+            br.write(linea);
             br.close();
 
 

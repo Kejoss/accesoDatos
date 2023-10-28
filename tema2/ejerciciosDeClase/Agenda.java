@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Agenda {
@@ -14,7 +15,7 @@ public class Agenda {
         
         Scanner sc = new Scanner(System.in);
 
-        File file = new File("tema2/ejerciciosDeClase/agenda.txt");
+        File file = new File("tema2/archivos/agenda.txt");
         ArrayList<String> listaContactos = new ArrayList<String>(20);
         try {
             
@@ -70,6 +71,7 @@ public class Agenda {
 
                     break;
                 case 3:
+                    Collections.sort(listaContactos);
                     for (String string : listaContactos) {
                         System.out.println(string);
                     }    
@@ -103,13 +105,14 @@ public class Agenda {
     }
 
     private static void anniadirContacto(String contacto){
-        File file = new File("tema2/ejerciciosDeClase/agenda.txt");
+        File file = new File("tema2/archivos/agenda.txt");
         BufferedWriter bw;
         try {
            
             if (file.exists()) {
                 
-                bw = new BufferedWriter(new FileWriter(file));
+                bw = new BufferedWriter(new FileWriter(file,true));
+                bw.newLine();
                 bw.write(contacto);
                 bw.close();
 
