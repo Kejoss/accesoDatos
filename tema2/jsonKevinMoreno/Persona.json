@@ -1,0 +1,9 @@
+{
+    "coche":"rojo",
+    "Temperatura":22.5,
+    "año":2010,
+    "mensaje":{
+        "Hola":"mundo"
+    },
+    "meses":["Enero","Febrero","Marzo"]
+}
