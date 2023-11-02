@@ -2,8 +2,6 @@ package tema2.ejerciciosDeClase.actividad6;
 
 import java.io.Serializable;
 
-import tema2.ejerciciosDeClase.actividad4.Clientes;
-
 public class ClienteSer implements Serializable, Comparable<ClienteSer> {
     
     private String dni;

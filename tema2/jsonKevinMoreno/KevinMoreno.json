@@ -1,0 +1,19 @@
+{
+  "nombre": "Kevin Anderson Moreno Gonzaga",
+  "edad": "22",
+  "correoElec": "kmorenogonzaga@educa.madrid.org",
+  "telefono": "643747008",
+  "nivelIngles": "B1",
+  "competencias": [
+    "Trabajo por objetivos",
+    "Atencion y concentracion",
+    "Responsabilidad"
+  ],
+  "listaEstudios": [
+    "IES Pio Baroja, 2020 - 2022, GM Sistemas microinformaticos y Redes",
+    "IES Pio Baroja, 2022 - Actualidad, GS Desarrollo de aplicaciones multiplataforma"
+  ],
+  "listaTrabajos": [
+    "Practicas, Metrica Consulting, marzo-junio"
+  ]
+}
