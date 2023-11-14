@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Empleados>
+    <Empleado id="">
+        <dni></dni>
+        <nombre></nombre>
+        <fechaNac></fechaNac>
+        <telefono></telefono>
+        <salario></salario>
+    </Empleado>
+
+    <Empleado id="">
+        <dni></dni>
+        <nombre></nombre>
+        <fechaNac></fechaNac>
+        <telefono></telefono>
+        <salario></salario>
+    </Empleado>
+
+    <Empleado id="">
+        <dni></dni>
+        <nombre></nombre>
+        <fechaNac></fechaNac>
+        <telefono></telefono>
+        <salario></salario>
+    </Empleado>
+
+    <Empleado id="">
+        <dni></dni>
+        <nombre></nombre>
+        <fechaNac></fechaNac>
+        <telefono></telefono>
+        <salario></salario>
+    </Empleado>
+
+
+</Empleados>
