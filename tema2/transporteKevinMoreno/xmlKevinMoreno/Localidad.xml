@@ -2,9 +2,9 @@
 
 <localidades>
 
-    <localidad codLocalidad="01" nombre=""/>
-    <localidad codLocalidad="02" nombre=""/>
-    <localidad codLocalidad="03" nombre=""/>
-    <localidad codLocalidad="04" nombre=""/>
+    <localidad codLocalidad="01" nombre="" provincia=""/>
+    <localidad codLocalidad="02" nombre="" provincia=""/>
+    <localidad codLocalidad="03" nombre="" provincia=""/>
+    <localidad codLocalidad="04" nombre="" provincia=""/>
 
 </localidades>

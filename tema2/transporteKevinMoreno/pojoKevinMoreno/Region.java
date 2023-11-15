@@ -1,13 +1,20 @@
 package tema2.transporteKevinMoreno.pojoKevinMoreno;
 
+import javax.xml.bind.annotation.*;
+
+@XmlRootElement(name = "Region")
+@XmlAccessorType(XmlAccessType.FIELD)
+
 public class Region {
     
+    @XmlAttribute(name = "codRegion")
     private String codRegion;
-    private String nombre;
-    
+    @XmlAttribute(name = "nombre")
+    private String nombreRegion;
+
     public Region(String codRegion, String nombre) {
         this.codRegion = codRegion;
-        this.nombre = nombre;
+        this.nombreRegion = nombre;
     }
 
     public String getCodRegion() {
@@ -18,17 +25,17 @@ public class Region {
         this.codRegion = codRegion;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreRegion() {
+        return nombreRegion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreRegion(String nombre) {
+        this.nombreRegion = nombre;
     }
 
     @Override
     public String toString() {
-        return "Region [codRegion=" + codRegion + ", nombre=" + nombre + "]";
+        return "Region [codRegion=" + codRegion + ", nombre=" + nombreRegion + "]";
     }
 
 }

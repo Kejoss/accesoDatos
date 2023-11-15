@@ -1,21 +1,36 @@
 package tema2.transporteKevinMoreno.pojoKevinMoreno;
 
+import javax.xml.bind.annotation.*;
+
+@XmlRootElement(name = "Empleado")
+@XmlType(propOrder ={"dni", "nombre","fechaNac","telefono","salario","lugarNacimiento"})
+@XmlAccessorType(XmlAccessType.FIELD)
+
 public class Empleado {
     
+    @XmlAttribute(name = "id")
     private String id;
+    @XmlElement(name = "dbi") 
     private String dni;
+    @XmlElement(name = "nombre")
     private String nombre;
+    @XmlElement(name = "fechaNac")
     private String fechaNac;
+    @XmlElement(name = "telefono")
     private String telefono;
+    @XmlElement(name = "salario")
     private double salario;
+    @XmlElement(name="lugarNacimiento")
+    private String lugarNacimiento;
 
-    public Empleado(String id, String dni, String nombre, String fechaNac, String telefono, double salario) {
+    public Empleado( String id,String dni, String nombre, String fechaNac, String telefono, double salario, String lugarNacimiento) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.fechaNac = fechaNac;
         this.telefono = telefono;
         this.salario = salario;
+        this.lugarNacimiento = lugarNacimiento;
     }
 
     public String getId() {
@@ -66,10 +81,18 @@ public class Empleado {
         this.salario = salario;
     }
 
+    public String getLugarNacimiento() {
+        return lugarNacimiento;
+    }
+
+    public void setLugarNacimiento(String lugarNacimiento) {
+        this.lugarNacimiento = lugarNacimiento;
+    }
+
     @Override
     public String toString() {
         return "Empleado [id=" + id + ", dni=" + dni + ", nombre=" + nombre + ", fechaNac=" + fechaNac + ", telefono="
-                + telefono + ", salario=" + salario + "]";
+                + telefono + ", salario=" + salario + "Lugar de nacimineto= "+lugarNacimiento +"]";
     }    
     
 }
