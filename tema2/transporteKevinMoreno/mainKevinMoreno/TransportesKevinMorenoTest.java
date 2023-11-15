@@ -3,7 +3,6 @@ package tema2.transporteKevinMoreno.mainKevinMoreno;
 import java.io.File;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import javax.xml.bind.JAXBContext;
@@ -14,15 +13,56 @@ import tema2.transporteKevinMoreno.pojoKevinMoreno.*;
 
 public class TransportesKevinMorenoTest {
     
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         
+        System.out.println("1- Listar todos los empleados, 2-Listar todo");
+        System.out.println("3-Insertar nuevo empleado, 4-Insertar nueva localidad");
+        System.out.println("5- Borrar empleado, 6-Mostrar empleado mas antiguo");
+        System.out.println("7- Mostrar empleado que mas dinero gana, 8- Salir");
+        int opr;
+
+        while ((opr = sc.nextInt())!=8) {
+            
+            switch (opr) {
+                case 1:
+                    listarEmpleados();
+                    break;
+                case 2:
+                    listarTodo();
+                    break;
+                case 3:
+                    insertarEmpleado();
+                    break;
+                case 4:
+                    insertarLocalidad();
+                    break;
+                case 5:
+                    borrarEmpleado();
+                    break;
+                case 6:
+                    mostrarEmpleadoAntiguo();
+                    break;
+                case 7:
+                    mostarEmpleadoConMasDienero();
+                    break;
+
+                default:
+                    System.out.println("Operador invalido");
+                    break;
+            }
+
+            System.out.println("1- Listar todos los empleados, 2-Listar todo");
+            System.out.println("3-Insertar nuevo empleado, 4-Insertar nueva localidad");
+            System.out.println("5- Borrar empleado, 6-Mostrar empleado mas antiguo");
+            System.out.println("7- Mostrar empleado que mas dinero gana, 8- Salir");
+        }
 
 
     }
 
-    private Empleados cargarEmpleados(){
+    private static Empleados cargarEmpleados(){
         try {
             
             JAXBContext contexto = JAXBContext.newInstance(Empleados.class);
@@ -35,7 +75,7 @@ public class TransportesKevinMorenoTest {
         return null;
     }
 
-    private Localidades cargarLocalidades(){
+    private static Localidades cargarLocalidades(){
         try {
             
             JAXBContext contexto = JAXBContext.newInstance(Localidades.class);
@@ -48,7 +88,7 @@ public class TransportesKevinMorenoTest {
         return null;
     } 
 
-    private Regiones cargarRegiones(){
+    private static Regiones cargarRegiones(){
         try {
             
             JAXBContext contexto = JAXBContext.newInstance(Regiones.class);
@@ -61,7 +101,7 @@ public class TransportesKevinMorenoTest {
         return null;
     }
 
-    private Provincias cargarProvincias(){
+    private static Provincias cargarProvincias(){
         try {
             
             JAXBContext contexto = JAXBContext.newInstance(Provincias.class);
@@ -74,14 +114,14 @@ public class TransportesKevinMorenoTest {
         return null;
     }
 
-    private void listarEmpleados(){
+    private static void listarEmpleados(){
         Empleados empleados = cargarEmpleados();
         for (Empleado empleado : empleados.getListaEmpleado()) {
             System.out.println(empleado);
         }
     }
 
-    private void listarTodo(){
+    private static void listarTodo(){
         Localidades localidades = cargarLocalidades();
         Empleados empleados = cargarEmpleados();
         Provincias provincias = cargarProvincias();
@@ -113,7 +153,7 @@ public class TransportesKevinMorenoTest {
 
     }
 
-    private void insertarEmpleado(){
+    private static void insertarEmpleado(){
         Empleados empleados = cargarEmpleados();
         
         System.out.println("Ingrese el id");
@@ -217,7 +257,7 @@ public class TransportesKevinMorenoTest {
         
     }
 
-    private void borrarEmpleado(){
+    private static void borrarEmpleado(){
         Empleados empleados = cargarEmpleados();
         
         System.out.println("Ingrese el el DNI");
@@ -240,46 +280,53 @@ public class TransportesKevinMorenoTest {
                 if (cantidadesProvincias == 1) {
                     Regiones regiones = cargarRegiones();
                     regiones.eliminarRegion(provincia.getRegion());
+
+                    try {
+                        JAXBContext contextRegiones = JAXBContext.newInstance(Regiones.class);
+                        Marshaller marshallerRegiones = contextRegiones.createMarshaller();
+
+                        marshallerRegiones.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
+                        marshallerRegiones.marshal(empleados, new File("transporteKevinMoreno/xmlKevinMoreno/Region.xml"));
+                    } catch (Exception e) {}
                 }
 
                 provincias.borrarProvincia(provincia.getNombreProvincia());
+
+                try {
+                    JAXBContext contextProvincias = JAXBContext.newInstance(Provincias.class);
+                    Marshaller marshallerProvincias = contextProvincias.createMarshaller();
+
+                    marshallerProvincias.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
+                    marshallerProvincias.marshal(provincias, new File("transporteKevinMoreno/xmlKevinMoreno/Provincia.xml"));
+
+                } catch (Exception e) { }
             }
 
             localidades.borrarLocalidad(localidad.getNombre());
 
+            try {
+                JAXBContext contextLocalidades = JAXBContext.newInstance(Localidades.class);
+                Marshaller marshallerLocalidades = contextLocalidades.createMarshaller();
+
+                marshallerLocalidades.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
+                marshallerLocalidades.marshal(localidades, new File("transporteKevinMoreno/xmlKevinMoreno/Localidad.xml"));
+            } catch (Exception e) {}
+
         }
 
-
-        /*Falta */
         try {
             
-            JAXBContext contextEmpleados = JAXBContext.newInstance(Empleados.class);
-            JAXBContext contextRegiones = JAXBContext.newInstance(Regiones.class);
-            JAXBContext contextLocalidades = JAXBContext.newInstance(Localidades.class);
-            JAXBContext contextProvincias = JAXBContext.newInstance(Provincias.class);
-           
+            JAXBContext contextEmpleados = JAXBContext.newInstance(Empleados.class);           
             Marshaller marshallerEmpleados = contextEmpleados.createMarshaller();
-            Marshaller marshallerRegiones = contextRegiones.createMarshaller();
-            Marshaller marshallerLocalidades = contextLocalidades.createMarshaller();
-            Marshaller marshallerProvincias = contextProvincias.createMarshaller();
-
+            
             marshallerEmpleados.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
             marshallerEmpleados.marshal(empleados, new File("transporteKevinMoreno/xmlKevinMoreno/Empleado.xml"));
-
-            marshallerLocalidades.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
-            marshallerLocalidades.marshal(empleados, new File("transporteKevinMoreno/xmlKevinMoreno/Empleado.xml"));
-
-            marshallerProvincias.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
-            marshallerProvincias.marshal(empleados, new File("transporteKevinMoreno/xmlKevinMoreno/Empleado.xml"));
-
-            marshallerRegiones.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
-            marshallerRegiones.marshal(empleados, new File("transporteKevinMoreno/xmlKevinMoreno/Empleado.xml"));
 
         } catch (Exception e) {}
 
     }
 
-    private void insertarLocalidad(){
+    private static void insertarLocalidad(){
         System.out.println("Ingresa el codigo de la localidad");
         String codLocalidad = sc.next();
         System.out.println("Ingresa el nombre");
@@ -348,7 +395,7 @@ public class TransportesKevinMorenoTest {
 
     }
 
-    private void mostrarEmpleadoAntiguo(){
+    private static void mostrarEmpleadoAntiguo(){
         Empleados empleados = cargarEmpleados();
 
         DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
@@ -367,7 +414,7 @@ public class TransportesKevinMorenoTest {
 
     }
 
-    private void mostarEmpleadoConMasDienero(){
+    private static void mostarEmpleadoConMasDienero(){
         Empleados empleados = cargarEmpleados();
         Empleado enpleadoConMasSalario = null;
         double salario =0;
