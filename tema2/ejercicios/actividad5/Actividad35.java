@@ -1,36 +1,37 @@
-package tema2.ejerciciosDeClase;
+package tema2.ejercicios.actividad5;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Actividad3 {
+public class Actividad35 {
    
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        File file = new File("tema2/archivos/meteo.txt");
-        ArrayList<String> listameteorologica = new ArrayList<String>();
+        ArrayList<Registro> listameteorologica = new ArrayList<Registro>();
         try {
-            if (file.exists()) {
-            int vuelta = 0;
-            BufferedReader bf = new BufferedReader(new FileReader(file));
-            String linea;
-            while ((linea=bf.readLine())!=null) {
-                if (vuelta!=0) {
-                  listameteorologica.add(linea);  
-                }
-                vuelta++;
+            FileInputStream file = new FileInputStream("tema2/archivos/meteo.dat");
+            ObjectInputStream ois = new ObjectInputStream(file); 
+            Registro registro;
+
+            while (ois.available()!=-1) {
+                
+                registro = (Registro)ois.readObject();
+                listameteorologica.add(registro);
             }
-            bf.close();   
-            }
+            ois.close();
+
 
         } catch (Exception e) {
-            e.printStackTrace();
+
+        }
+
+        for (Registro registro : listameteorologica) {
+            System.out.println(registro);
         }
 
         System.out.println("¿Que operacion quieres hacer?");
@@ -48,9 +49,10 @@ public class Actividad3 {
                     String temMax = sc.next();
                     System.out.println("Temperatura minima");
                     String temMin = sc.next();
-
-                    listameteorologica.add(ciudad+" "+fecha+" "+temMax+" "+temMin);
-                    registrarTemperatura(ciudad+" "+fecha+" "+temMax+" "+temMin);
+                    
+                    Registro registro = new Registro(ciudad, fecha, temMax, temMin);
+                    listameteorologica.add(registro);
+                    registrarTemperatura(listameteorologica);
 
                     break;
                 case 2:
@@ -58,9 +60,9 @@ public class Actividad3 {
                     System.out.println("Ingresa el nombre de la ciudad");
                     String ciudadBus = sc.next();
 
-                    for (String string : listameteorologica) {
-                        if (string.split(" ")[0].equalsIgnoreCase(ciudadBus)) {
-                            System.out.println(string);
+                    for (Registro registroShow: listameteorologica) {
+                        if (registroShow.getCiudad().equalsIgnoreCase(ciudadBus)) {
+                            System.out.println(registroShow);
                         }
                     }
 
@@ -70,11 +72,11 @@ public class Actividad3 {
                     System.out.println("Ingresa la ciudad ");
                     String ciudadMedia= sc.next();
                     int mediaMin=0, mediaMax = 0, vuelta=0;
-                    for (String string : listameteorologica) {
+                    for (Registro registroMedia : listameteorologica) {
                         
-                        if (string.split(" ")[0].equalsIgnoreCase(ciudadMedia)) {
-                            mediaMax+=Integer.parseInt(string.split(" ")[2]);
-                            mediaMin+=Integer.parseInt(string.split(" ")[3]);
+                        if (registroMedia.getCiudad().equalsIgnoreCase(ciudadMedia)) {
+                            mediaMax+=Integer.parseInt(registroMedia.getTempMax());
+                            mediaMin+=Integer.parseInt(registroMedia.getTempMin());
                             vuelta++;
                         }
                     }
@@ -95,19 +97,19 @@ public class Actividad3 {
         sc.close();
     } 
     
-    private static void registrarTemperatura(String linea){
+    private static void registrarTemperatura(ArrayList<Registro> listaregistro){
 
-        File file = new File("tema2/archivos/meteo.txt");
         try {
             
-            BufferedWriter br = new BufferedWriter(new FileWriter(file,true));
-            br.newLine();
-            br.write(linea);
-            br.close();
-
+            FileOutputStream fos = new FileOutputStream("tema2/archivos/meteo.dat");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);          
+            
+            for (Registro registro2 : listaregistro) {
+                oos.writeObject(registro2);
+            }
+            oos.close();
 
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
     }

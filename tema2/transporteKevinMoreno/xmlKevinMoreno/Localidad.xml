@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <localidades>
-
-    <localidad codLocalidad="01" nombre="" provincia=""/>
-    <localidad codLocalidad="02" nombre="" provincia=""/>
-    <localidad codLocalidad="03" nombre="" provincia=""/>
-    <localidad codLocalidad="04" nombre="" provincia=""/>
-
+    <localidad codLocalidad="01" nombre="Madrid" provincia="Madrid"/>
+    <localidad codLocalidad="02" nombre="Barcelona" provincia="Cataluña"/>
+    <localidad codLocalidad="03" nombre="Valencia" provincia="Comunidad Valenciana"/>
+    <localidad codLocalidad="04" nombre="Sevilla" provincia="Andalucía"/>
 </localidades>

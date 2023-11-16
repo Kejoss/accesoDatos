@@ -1,4 +1,4 @@
-package tema2.ejerciciosDeClase.actividad7;
+package tema2.ejercicios.actividad7;
 
 import java.io.BufferedWriter;
 import java.io.File;

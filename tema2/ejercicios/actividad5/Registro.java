@@ -1,4 +1,4 @@
-package tema2.ejerciciosDeClase.actividad5;
+package tema2.ejercicios.actividad5;
 
 import java.io.Serializable;
 

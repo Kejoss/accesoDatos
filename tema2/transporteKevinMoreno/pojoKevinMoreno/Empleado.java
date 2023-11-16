@@ -3,14 +3,14 @@ package tema2.transporteKevinMoreno.pojoKevinMoreno;
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "Empleado")
-@XmlType(propOrder ={"dni", "nombre","fechaNac","telefono","salario","lugarNacimiento"})
+@XmlType(propOrder ={"id","dni", "nombre","fechaNac","telefono","salario","lugarNacimiento"})
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Empleado {
     
     @XmlAttribute(name = "id")
     private String id;
-    @XmlElement(name = "dbi") 
+    @XmlElement(name = "dni") 
     private String dni;
     @XmlElement(name = "nombre")
     private String nombre;
@@ -22,6 +22,10 @@ public class Empleado {
     private double salario;
     @XmlElement(name="lugarNacimiento")
     private String lugarNacimiento;
+
+    public Empleado(){
+        
+    }
 
     public Empleado( String id,String dni, String nombre, String fechaNac, String telefono, double salario, String lugarNacimiento) {
         this.id = id;
@@ -92,7 +96,7 @@ public class Empleado {
     @Override
     public String toString() {
         return "Empleado [id=" + id + ", dni=" + dni + ", nombre=" + nombre + ", fechaNac=" + fechaNac + ", telefono="
-                + telefono + ", salario=" + salario + "Lugar de nacimineto= "+lugarNacimiento +"]";
+                + telefono + ", salario=" + salario + " Lugar de nacimineto= "+lugarNacimiento +"]";
     }    
     
 }

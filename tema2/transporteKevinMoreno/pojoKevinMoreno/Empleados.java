@@ -7,16 +7,18 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "Empleados")
-@XmlType(propOrder ={"Empleado"})
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Empleados {
 
     @XmlElement(name = "Empleado")
     private ArrayList<Empleado> listaEmpleado;
+
+    public Empleados(){
+        
+    }
 
     public Empleados(ArrayList<Empleado> listaEmpleado){
         this.listaEmpleado = listaEmpleado;

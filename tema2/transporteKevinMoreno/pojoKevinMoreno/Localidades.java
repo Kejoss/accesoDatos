@@ -7,15 +7,18 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "Localidades")
-@XmlType(propOrder ={"localidad"})
+@XmlRootElement(name = "localidades")
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Localidades {
+    
     @XmlElement(name = "localidad")
     private ArrayList<Localidad>listaLocalidades;
+
+    public Localidades(){
+        
+    }
 
     public Localidades(ArrayList<Localidad>listaLocalidades){
         this.listaLocalidades = listaLocalidades;

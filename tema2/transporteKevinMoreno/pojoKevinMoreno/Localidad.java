@@ -3,16 +3,21 @@ package tema2.transporteKevinMoreno.pojoKevinMoreno;
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "localidad")
+@XmlType(propOrder ={"codLocalidad", "nombre", "provincia"})
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Localidad {
-    
-    @XmlAttribute(name="nombre")
-    private String nombre;
+
     @XmlAttribute(name="codLocalidad")
     private String codLocalidad;
+    @XmlAttribute(name="nombre")
+    private String nombre;
     @XmlAttribute(name="provincia")
     private String provincia;
+
+    public Localidad(){
+
+    }
 
     public Localidad(String nombre, String codLocalidad, String provincia){
         this.codLocalidad = codLocalidad;

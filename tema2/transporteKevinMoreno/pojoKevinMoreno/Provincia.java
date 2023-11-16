@@ -3,6 +3,7 @@ package tema2.transporteKevinMoreno.pojoKevinMoreno;
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "Provincia")
+@XmlType(propOrder ={"codProvincia", "nombre", "region"})
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Provincia {
@@ -10,22 +11,26 @@ public class Provincia {
     @XmlAttribute(name = "codProvincia")
     private String codProvincia;
     @XmlAttribute(name = "nombre")
-    private String nombreProvincia;
+    private String nombre;
     @XmlAttribute(name="region")
     private String region;
 
+    public Provincia(){
+        
+    }
+
     public Provincia(String codProvincia, String nombreProvincia, String region){
-        this.nombreProvincia = codProvincia;
+        this.nombre =nombreProvincia;
         this.codProvincia = codProvincia;
         this.region = region;
     }
     
     public String getNombreProvincia() {
-        return nombreProvincia;
+        return nombre;
     }
 
     public void setNombreProvincia(String nombre) {
-        this.nombreProvincia = nombre;
+        this.nombre = nombre;
     }
 
     public String getCodProvincia() {
@@ -46,7 +51,7 @@ public class Provincia {
 
     @Override
     public String toString() {
-        return "Provincia [codProvincia=" + codProvincia + ", nombre=" + nombreProvincia +" Region a la que pertenece= "+region+ "]";
+        return "Provincia [codProvincia=" + codProvincia + ", nombre=" + nombre +" Region a la que pertenece= "+region+ "]";
     }    
 
 }

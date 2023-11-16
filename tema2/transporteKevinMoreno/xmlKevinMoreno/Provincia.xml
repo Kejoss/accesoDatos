@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Probincias>
-    <Provincia codProvincia="" nombre="" region=""/>
-    <Provincia codProvincia="" nombre="" region=""/>
-    <Provincia codProvincia="" nombre="" region=""/>
-    <Provincia codProvincia="" nombre="" region=""/>
-</Probincias>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Provincias>
+    <Provincia codProvincia="01" nombre="Madrid" region="Comunidad de Madrid"/>
+    <Provincia codProvincia="02" nombre="Barcelona" region="Cataluña"/>
+    <Provincia codProvincia="03" nombre="Valencia" region="Comunidad Valenciana"/>
+    <Provincia codProvincia="04" nombre="Sevilla" region="Andalucía"/>
+</Provincias>

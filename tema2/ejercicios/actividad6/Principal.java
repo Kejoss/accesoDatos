@@ -1,4 +1,4 @@
-package tema2.ejerciciosDeClase.actividad6;
+package tema2.ejercicios.actividad6;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

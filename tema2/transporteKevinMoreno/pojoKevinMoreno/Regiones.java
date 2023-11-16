@@ -7,16 +7,18 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "Regiones")
-@XmlType(propOrder ={"Region"})
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Regiones {
 
     @XmlElement(name = "Region")
     private ArrayList<Region>listaRegiones;
+
+    public Regiones(){
+        
+    }
 
     public Regiones(ArrayList<Region>listaRegiones){
         this.listaRegiones = listaRegiones;

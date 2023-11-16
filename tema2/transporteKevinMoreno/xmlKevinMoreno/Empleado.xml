@@ -1,40 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Empleados>
-    <Empleado id="">
-        <dni></dni>
-        <nombre></nombre>
-        <fechaNac></fechaNac>
-        <telefono></telefono>
-        <salario></salario>
+    <Empleado id="01">
+        <dni>12345678A</dni>
+        <nombre>Juan Pérez</nombre>
+        <fechaNac>1990-01-01</fechaNac>
+        <telefono>600123456</telefono>
+        <salario>30000.0</salario>
+        <lugarNacimiento>Sevilla</lugarNacimiento>
     </Empleado>
-
-    <Empleado id="">
-        <dni></dni>
-        <nombre></nombre>
-        <fechaNac></fechaNac>
-        <telefono></telefono>
-        <salario></salario>
-        <lugarNacimiento></lugarNacimiento>
+    <Empleado id="02">
+        <dni>23456789B</dni>
+        <nombre>Maria López</nombre>
+        <fechaNac>1985-02-02</fechaNac>
+        <telefono>600234567</telefono>
+        <salario>35000.0</salario>
+        <lugarNacimiento>Madrid</lugarNacimiento>
     </Empleado>
-
-    <Empleado id="">
-        <dni></dni>
-        <nombre></nombre>
-        <fechaNac></fechaNac>
-        <telefono></telefono>
-        <salario></salario>
-        <lugarNacimiento></lugarNacimiento>
+    <Empleado id="03">
+        <dni>34567890C</dni>
+        <nombre>Carlos García</nombre>
+        <fechaNac>1990-03-03</fechaNac>
+        <telefono>600345678</telefono>
+        <salario>40000.0</salario>
+        <lugarNacimiento>Barcelona</lugarNacimiento>
     </Empleado>
-
-    <Empleado id="">
-        <dni></dni>
-        <nombre></nombre>
-        <fechaNac></fechaNac>
-        <telefono></telefono>
-        <salario></salario>
-        <lugarNacimiento></lugarNacimiento>
+    <Empleado id="04">
+        <dni>45678901D</dni>
+        <nombre>Ana Martínez</nombre>
+        <fechaNac>1995-04-04</fechaNac>
+        <telefono>600456789</telefono>
+        <salario>45000.0</salario>
+        <lugarNacimiento>Valencia</lugarNacimiento>
     </Empleado>
-
-
 </Empleados>

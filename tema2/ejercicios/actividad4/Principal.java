@@ -1,4 +1,4 @@
-package tema2.ejerciciosDeClase.actividad4;
+package tema2.ejercicios.actividad4;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

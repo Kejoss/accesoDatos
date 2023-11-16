@@ -1,4 +1,4 @@
-package tema2.ejerciciosDeClase;
+package tema2.ejercicios.actividad2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -26,7 +26,7 @@ public class Agenda {
                 while ((Linea = br.readLine())!= null) {
                     listaContactos.add(Linea);
                 } 
-
+                br.close();
             }
 
         } catch (Exception e) {
