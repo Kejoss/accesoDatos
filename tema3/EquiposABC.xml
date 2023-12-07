@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ACB>
+    <equipo ciudad="Madrid" habitantes="3223334">
+        <nombre>Real Madrid</nombre>
+        <ligas>36</ligas>
+    </equipo>
+
+    <equipo ciudad="Barcelona" habitantes="1664182">
+        <nombre>F.C. Barcelona</nombre>
+        <ligas>20</ligas>
+    </equipo>
+
+    <equipo ciudad="Vitoria-Gasteiz" habitantes="242223">
+        <nombre>Baskonia</nombre>
+        <ligas>4</ligas>
+    </equipo>
+
+    <equipo ciudad="Badalona" habitantes="217210">
+        <nombre>Joventut Badalona</nombre>
+        <ligas>4</ligas>
+    </equipo>
+
+    <equipo ciudad="Málaga" habitantes="574654">
+        <nombre>Unicaja</nombre>
+        <ligas>1</ligas>
+    </equipo>
+
+    <equipo ciudad="Manresa" habitantes="76525">
+        <nombre>Bàsquet Manresa</nombre>
+        <ligas>1</ligas>
+    </equipo>
+
+    <equipo ciudad="Valencia" habitantes="794288">
+        <nombre>Valencia Basket</nombre>
+        <ligas>1</ligas>
+    </equipo>
+
+    <equipo ciudad="Zaragoza" habitantes="674997">
+        <nombre>Casademont Zaragoza</nombre>
+        <ligas>0</ligas>
+    </equipo>
+    
+</ACB>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Empleados>
+        
+    <empleado cargo="Productores" id="1">
+                
+        <nombre>Javier</nombre>
+                
+        <apellidos>Caranza Menor</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Informatico" id="2">
+                
+        <nombre>Daniel</nombre>
+                
+        <apellidos>Bone Armijos</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="RRHH" id="3">
+
+        <nombre>Fernando</nombre>
+
+        <apellidos>Cadenas Roman</apellidos>
+
+    </empleado>
+    
+    <empleado cargo="Informatico" id="4">
+                
+        <nombre>Wendy</nombre>
+                
+        <apellidos>Mera Santander</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Productores" id="5">
+                
+        <nombre>Adam</nombre>
+                
+        <apellidos>Seddeki bada</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Productores" id="6">
+                
+        <nombre>Carlos</nombre>
+                
+        <apellidos>Gonzalez Perez</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Productores" id="7">
+                
+        <nombre>Isabel</nombre>
+                
+        <apellidos>Rodriguez Lopez</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Productores" id="8">
+                
+        <nombre>Antonio</nombre>
+                
+        <apellidos>Martinez Garcia</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Informatico" id="9">
+                
+        <nombre>Francisco</nombre>
+                
+        <apellidos>Jimenez Morales</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Informatico" id="10">
+                
+        <nombre>Ana</nombre>
+                
+        <apellidos>Ruiz Guzman</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="Informatico" id="11">
+                
+        <nombre>David</nombre>
+                
+        <apellidos>Moreno Mendez</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="RRHH" id="12">
+                
+        <nombre>Patricia</nombre>
+                
+        <apellidos>Lopez Silva</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="RRHH" id="13">
+                
+        <nombre>Ruben</nombre>
+                
+        <apellidos>Torres Castro</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="RRHH" id="14">
+                
+        <nombre>Sara</nombre>
+                
+        <apellidos>Santos Romero</apellidos>
+            
+    </empleado>
+        
+    <empleado cargo="RRHH" id="15">
+                
+        <nombre>Miguel</nombre>
+                
+        <apellidos>Guerrero Navarro</apellidos>
+            
+    </empleado>
+    
+</Empleados>

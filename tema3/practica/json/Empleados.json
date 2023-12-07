@@ -1,0 +1,26 @@
+{"empleado": [
+    {
+        "apellidos": "Lopez Silva",
+        "id": 12,
+        "cargo": "RRHH",
+        "nombre": "Patricia"
+    },
+    {
+        "apellidos": "Torres Castro",
+        "id": 13,
+        "cargo": "RRHH",
+        "nombre": "Ruben"
+    },
+    {
+        "apellidos": "Santos Romero",
+        "id": 14,
+        "cargo": "RRHH",
+        "nombre": "Sara"
+    },
+    {
+        "apellidos": "Guerrero Navarro",
+        "id": 15,
+        "cargo": "RRHH",
+        "nombre": "Miguel"
+    }
+]}

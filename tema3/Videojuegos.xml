@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Videojuegos>
+
+    <videojuego nivel="facil">
+        <nombre>Super Mario Bros</nombre>
+        <fechaLanzamiento>13/09/1985</fechaLanzamiento>
+        <plataforma>Nintendo Entertainment System</plataforma>
+    </videojuego>
+
+    <videojuego nivel="medio">
+        <nombre>The Legend of Zelda: Ocarina of Time</nombre>
+        <fechaLanzamiento>21/11/1998</fechaLanzamiento>
+        <plataforma>Nintendo 64</plataforma>
+    </videojuego>
+
+    <videojuego nivel="avanzado">
+        <nombre>Dark Souls</nombre>
+        <fechaLanzamiento>22/09/2011</fechaLanzamiento>
+        <plataforma>PlayStation 3, Xbox 360</plataforma>
+    </videojuego>
+
+    <videojuego nivel="avanzado">
+        <nombre>Sekiro: Shadows Die Twice</nombre>
+        <fechaLanzamiento>22/03/2019</fechaLanzamiento>
+        <plataforma>PlayStation 4, Xbox One, Microsoft Windows</plataforma>
+    </videojuego>
+
+    <videojuego nivel="medio">
+        <nombre>Final Fantasy VII</nombre>
+        <fechaLanzamiento>31/01/1997</fechaLanzamiento>
+        <plataforma>PlayStation</plataforma>
+    </videojuego>
+
+    <videojuego nivel="facil">
+        <nombre>Minecraft</nombre>
+        <fechaLanzamiento>18/11/2011</fechaLanzamiento>
+        <plataforma>Multiplataforma</plataforma>
+    </videojuego>
+
+    <videojuego nivel="medio">
+        <nombre>Overwatch</nombre>
+        <fechaLanzamiento>24/05/2016</fechaLanzamiento>
+        <plataforma>PlayStation 4, Xbox One, Microsoft Windows</plataforma>
+    </videojuego>
+    
+    <videojuego nivel="avanzado">
+        <nombre>The Witcher 3: Wild Hunt</nombre>
+        <fechaLanzamiento>19/05/2015</fechaLanzamiento>
+        <plataforma>PlayStation 4, Xbox One, Microsoft Windows</plataforma>
+    </videojuego>
+
+</Videojuegos>

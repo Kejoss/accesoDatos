@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Productos>
+
+    <producto codigo="1">
+        <nombre>Sanduche</nombre>
+        <cantidad>152</cantidad>
+        <precio>21,75</precio>
+    </producto>
+
+    <producto codigo="2">
+        <nombre>Polito</nombre>
+        <cantidad>120</cantidad>
+        <precio>16,38</precio>
+    </producto>
+
+    <producto codigo="3">
+        <nombre>Cornetto</nombre>
+        <cantidad>112</cantidad>
+        <precio>21,8</precio>
+    </producto>
+
+    <producto codigo="4">
+        <nombre>Caseros</nombre>
+        <cantidad>98</cantidad>
+        <precio>18,6</precio>
+    </producto>
+
+    <producto codigo="5">
+        <nombre>Empastados</nombre>
+        <cantidad>200</cantidad>
+        <precio>15,50</precio>
+    </producto>
+    
+    <producto codigo="6">
+        <nombre>Mini yug</nombre>
+        <cantidad>180</cantidad>
+        <precio>20,00</precio>
+    </producto>
+    
+    <producto codigo="7">
+        <nombre>Gemelos</nombre>
+        <cantidad>150</cantidad>
+        <precio>25,00</precio>
+    </producto>
+    
+    <producto codigo="8">
+        <nombre>Manicho</nombre>
+        <cantidad>175</cantidad>
+        <precio>12,00</precio>
+    </producto>
+    
+    <producto codigo="9">
+        <nombre>Bigbar</nombre>
+        <cantidad>190</cantidad>
+        <precio>18,00</precio>
+    </producto>
+    
+    <producto codigo="10">
+        <nombre>Bubbaloo</nombre>
+        <cantidad>210</cantidad>
+        <precio>22,50</precio>
+    </producto>
+
+</Productos>

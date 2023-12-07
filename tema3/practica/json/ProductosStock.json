@@ -1,0 +1,62 @@
+{"producto": [
+    {
+        "codigo": 1,
+        "precio": "21,75",
+        "cantidad": 152,
+        "nombre": "Sanduche"
+    },
+    {
+        "codigo": 2,
+        "precio": "16,38",
+        "cantidad": 120,
+        "nombre": "Polito"
+    },
+    {
+        "codigo": 3,
+        "precio": "21,8",
+        "cantidad": 112,
+        "nombre": "Cornetto"
+    },
+    {
+        "codigo": 4,
+        "precio": "18,6",
+        "cantidad": 98,
+        "nombre": "Caseros"
+    },
+    {
+        "codigo": 5,
+        "precio": "15,50",
+        "cantidad": 200,
+        "nombre": "Empastados"
+    },
+    {
+        "codigo": 6,
+        "precio": "20,00",
+        "cantidad": 180,
+        "nombre": "Mini yug"
+    },
+    {
+        "codigo": 7,
+        "precio": "25,00",
+        "cantidad": 150,
+        "nombre": "Gemelos"
+    },
+    {
+        "codigo": 8,
+        "precio": "12,00",
+        "cantidad": 175,
+        "nombre": "Manicho"
+    },
+    {
+        "codigo": 9,
+        "precio": "18,00",
+        "cantidad": 190,
+        "nombre": "Bigbar"
+    },
+    {
+        "codigo": 10,
+        "precio": "22,50",
+        "cantidad": 210,
+        "nombre": "Bubbaloo"
+    }
+]}

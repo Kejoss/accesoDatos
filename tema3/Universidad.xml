@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Universidad>
+
+    <departamento>
+        <codigo>IFC1</codigo>
+        <nombre>Informatica</nombre>
+        <empleado salario="1000">
+            <puesto>Asociado</puesto>
+            <nombre>Juan Parra</nombre>
+        </empleado>
+        <empleado salario="2000">
+            <puesto>Profesor</puesto>
+            <nombre>Alicia Martin</nombre>
+        </empleado>
+    </departamento>
+
+    <departamento telefono="99033" tipo="A">
+        <codigo>MAT1</codigo>
+        <nombre>Matematicas</nombre>
+        <empleado salario="1500">
+            <puesto>Tecnico</puesto>
+            <nombre>Ana Garcia</nombre>
+        </empleado>
+        <empleado salario="2100">
+            <puesto>Profesor</puesto>
+            <nombre>Maria Ramos</nombre>
+        </empleado>
+        <empleado salario="1100">
+            <puesto>Asociado</puesto>
+            <nombre>Antonio Campos</nombre>
+        </empleado>
+    </departamento>
+
+    <departamento telefono="880833" tipo="A">
+        <codigo>MAT2</codigo>
+        <nombre>Estadistica</nombre>
+        <empleado salario="1600">
+            <puesto>Asociado</puesto>
+            <nombre>Laura Ruiz</nombre>
+        </empleado>
+        <empleado salario="2000">
+            <puesto>Profesor</puesto>
+            <nombre>Mario Lanchas</nombre>
+        </empleado>
+    </departamento>
+</Universidad>
